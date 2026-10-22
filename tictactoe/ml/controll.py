@@ -1,6 +1,7 @@
 from logic import movesAndOverlap as move
 from nm import  hi1
 
+board = [["","",""],["","",""],["","",""]]
 
 def model(oard):
     board = 0
@@ -40,12 +41,14 @@ t = 0
 x = True
 while x == True:
     if t % 2 == 1:
-        board,l = model(board)
+        #board,l = model(board)
+        board,l = human()
 
         print(1)
 
     else:
-        board,l = human()
+        #board,l = human()
+        board,l = model(board)
 
         print(2)
 
