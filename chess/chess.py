@@ -23,17 +23,24 @@ def check(moved,move,p2,p1,i2,i1):
         pass
     
     if moved[0] == "1":
+        if moved[1] == "1":
         
-        if p2 +1 != i2:
-            print(p2,i2)
-            return "n"
-  
-        print("hi")
-        if p2 == 1:
-            print("hi")
-            if p2 +2 != i2:
-                print(2)
+            if p2 +1 == i2:
+                pass
+            elif p2 +2 == i2 and p2 == 1:
+                pass
+            else :
                 return "n"
+        if moved[1] == "0":
+        
+            if p2 - 1 == i2:
+                pass
+            elif p2 -2 == i2 and p2 == 1:
+                pass
+            else :
+                return "n"
+    
+            
     return("l")
         
             
@@ -76,5 +83,8 @@ while True:
         print("iligal move")
 
     print(f" a  b  c  d  e  f  g  h  \n{board[0]} 0\n{board[1]} 1\n{board[2]} 2\n{board[3]} 3\n{board[4]} 4\n{board[5]} 5\n{board[6]} 6\n{board[7]} 7\n")
+    
+    
+    
     
 
